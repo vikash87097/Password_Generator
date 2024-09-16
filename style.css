@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(359deg, plum, mediumpurple,rebeccapurple);
+}
+#passgen{
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: gainsboro;
+    margin: 0px 20px;
+}
+.display{
+
+    background-color: thistle;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 5px rebeccapurple;
+    margin: 20px 0px;
+}
+#disppass{
+
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.3rem; 
+}
+#disppass::placeholder{
+
+    text-transform: uppercase;
+}
+#copypass{
+
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+.inputcont{
+
+    background-color: thistle;
+    border-radius: 10px;
+    box-shadow: 0px 5px rebeccapurple;
+    padding: 15px;
+}
+.passlen{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.passlen p{
+
+    text-transform: capitalize;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.4rem;
+}
+#slider{
+
+    width: 100%;
+}
+.strength{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.strength h2{
+
+    text-transform: capitalize;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 15px 0px;
+}
+#passstindi{
+
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+}
+#generatepass{
+
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-family: 'Varela Round', sans-serif;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #dda0dd8c;
+    color: #4b00829c;
+    box-shadow: 0px 5px #8080807d;
+    margin: 10px 0px;
+}
+
+.check{
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 0px;
+}
+.check label{
+
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    color: darkslateblue;
+    font-size: 1.1rem;
+}
+.check input{
+
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 1px solid rebeccapurple;
+    cursor: pointer;
+    position: relative;
+}
+.check input:checked{
+
+    background-color: plum;
+}
+.check input:checked::before{
+
+    content:'✔';
+    position: absolute;
+    top: -3px;
+    left: 1px;
+    color: gray;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 300px;
+    width: 3px;
+    border-radius: 10px;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -3px; 
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; 
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 12px;
+    cursor: pointer;
+    background: #4b00829c;
+    border-radius: 20px;
+    margin: 20px 0px;
+} 
+
+#coptext{
+
+    position: absolute;
+    bottom: 30px;
+    right: -27px;
+    opacity: 0;
+    font-size: 18px;
+    text-transform: capitalize;
+    background-color: plum;
+    border-radius: 30px;
+    padding: 5px 10px;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 0.5s;
+    color: black;
+}
+
+#coptext.active{
+
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (max-width:412px) {
+    
+    #passgen{
+
+        text-align: center;
+        max-width: 50%;
+        margin: auto;
+        font-size: 1.8rem;
+    }
+    #disppass{
+
+        font-size: 1.1rem;
+    }
+    .passlen p{
+
+        font-size: 1.1rem;
+    }
+    .strength h2{
+
+        font-size: 1.1rem;
+    }
+    #generatepass{
+
+        font-size: 1.1rem;
+    }
+
+    .cont{
+
+        margin-bottom: 40px;
+    }
+}

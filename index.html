@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="icon" type="image" href="/padlock.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cont">
+
+            <h1 id="passgen">Password generator</h1>
+            <div class="display">
+
+                <input readonly placeholder="Password" id="disppass">
+                <button id="copypass">
+                    <span id="coptext"></span>
+                    <img src="84185.png" alt="XXX" width="18px">
+                </button>
+            </div>
+
+            <div class="inputcont">
+
+                <div class="passlen">
+                    <p>password length</p>
+                    <p id="passlennum">0</p>
+                </div>
+
+                <input type="range" min="1" max="20" step="1" id="slider">
+
+                <div class="checkbox">
+
+                    <div class="check">
+                        <input type="checkbox" name="mycheckboxu" id="mycheckboxu">
+                        <label for="mycheckboxu">Include Uppercase Letters</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="mycheckboxl" id="mycheckboxl">
+                        <label for="mycheckboxl">Include lowercase Letters</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="mycheckboxn" id="mycheckboxn">
+                        <label for="mycheckboxn">Include numbers</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="mycheckboxs" id="mycheckboxs">
+                        <label for="mycheckboxs">Include symbols</label>
+                    </div>
+                </div>
+
+                <div class="strength">
+                    <h2>strength</h2>
+                    <div id="passstindi"></div>
+                </div>
+
+                <button id="generatepass">generate password</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script
+</body>
+</html>
